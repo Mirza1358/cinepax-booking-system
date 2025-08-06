@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.membership {
+    padding: 40px 0;
+}
+
+.membership h2 {
+    color: #ff3b3f;
+    margin-bottom: 20px;
+}
+
+.membership h3 {
+    color: #333;
+    margin: 30px 0 20px;
+}
+
+.membership h4 {
+    color: #ff3b3f;
+    margin: 30px 0 20px;
+}
+
+.membership ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.membership ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.membership ul li:last-child {
+    border-bottom: none;
+}
+
+.membership table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.membership th, 
+.membership td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Styles for register layout */
+.auth-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.auth-section h3 {
+    color: #ff3b3f;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff3b3f;
+    box-shadow: 0 0 0 0.2rem rgba(255, 59, 63, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: #ff3b3f;
+    background-image: none;
+}
+
+.error-message {
+    color: #ff3b3f;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.btn-primary {
+    background-color: #ff3b3f;
+    border-color: #ff3b3f;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff0a0f;
+    border-color: #ff0a0f;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-color: #28a745;
+    color: #28a745;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #ff3b3f;
+    color: white;
+}
+
+.table td, .table th {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .auth-section {
+        padding: 20px 0;
+    }
+    
+    .membership {
+        padding: 20px 0;
+    }
+    
+    .table td, .table th {
+        padding: 10px;
+    }
+}
