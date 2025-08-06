@@ -30,16 +30,6 @@ mongoose.connect(process.env.MONGODB_URI)
         process.exit(1);
     });
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: 'Server is running',
-        timestamp: new Date().toISOString(),
-        uptime: process.uptime()
-    });
-});
-
 // Routes - all public, no authentication required
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/users', userRoutes);
