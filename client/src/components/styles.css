@@ -1,0 +1,672 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #a40000;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-container img {
+  width: 80px;
+  height: auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1600a4;
+}
+
+nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #a40000;
+  bottom: -5px;
+  left: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.theater-buttons {
+  margin: 10px 0;
+}
+
+.theater-buttons button {
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.red {
+  background-color: #d9534f;
+}
+
+.black {
+  background-color: #333;
+}
+
+.now-showing,
+.upcoming-movies,
+.highlights-events {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Updated Movie Slider Styles */
+.movie-slider {
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.movie-slides {
+  display: flex;
+  width: 200%;
+  animation: slide 4s infinite;
+}
+
+.movie-slide-group {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+@keyframes slide {
+  0%, 45% {
+      transform: translateX(0);
+  }
+  50%, 95% {
+      transform: translateX(-50%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.movie-card {
+  flex: 1;
+  display: flex;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.movie-poster {
+  flex: 0 0 120px;
+  margin-right: 15px;
+}
+
+.movie-poster img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.movie-format {
+  display: inline-block;
+  background-color: #a40000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.book-ticket-btn {
+  display: inline-block;
+  background-color: #ff4040;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.book-ticket-btn:hover {
+  background-color: #cc0000;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.movie-rating span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.movie-rating img {
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+}
+
+.movie-rating small {
+  color: #666;
+  margin-left: 2px;
+}
+
+.movie-date {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.movie-genre {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.showtimes {
+  margin-top: auto;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.showtime {
+  font-size: 14px;
+  color: #333;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showtime span {
+  color: #a40000;
+  font-weight: bold;
+}
+
+.no-show {
+  color: #a40000;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.movie {
+  margin: 10px;
+  text-align: center;
+}
+
+.movie img {
+  width: 200px;
+  height: 300px;
+  display: block;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.trailer-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.trailer-btn:hover {
+  background-color: darkred;
+}
+.movie:hover {
+  transform: scale(1.1) rotate(1deg); 
+}
+
+.highlights-events {
+  text-align: center;
+  border: 2px solid #a40000;
+}
+
+.highlights-events-images img {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.upcoming-movies {
+height: auto;
+text-align: center; 
+padding: 20px;
+background-color: #fff;
+margin: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.upcoming-movies-images {
+width: 100%;
+display: flex !important; 
+flex-direction: row !important; 
+flex-wrap: wrap; 
+justify-content: center; 
+}
+
+.upcoming-movies-images .col {
+flex: 0 0 auto; 
+width: 25%; 
+text-align: center; 
+}
+
+.upcoming-movies-images img {
+margin-top: 10px;
+width: 200px; 
+max-width: 100%; 
+border-radius: 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (max-width: 767.98px) {
+.upcoming-movies-images .col {
+width: 50%; 
+}
+}
+
+@media (max-width: 575.98px) {
+.upcoming-movies-images .col {
+width: 100%; 
+}
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #c1acac;
+  border-top: 2px solid #0d0000;
+}
+
+.footer a {
+  margin: 0 15px;
+  color: #080000;
+  text-decoration: none;
+}
+
+/* Seat Selection Styles */
+.seat-selection-container {
+max-width: 1000px;
+margin: 40px auto;
+padding: 20px;
+background: rgba(0, 0, 0, 0.8);
+border-radius: 10px;
+color: white;
+}
+
+.screen {
+width: 80%;
+height: 10px;
+background: #ff3b3f;
+margin: 20px auto;
+border-radius: 5px;
+position: relative;
+}
+
+.screen::after {
+content: 'SCREEN';
+position: absolute;
+top: -25px;
+left: 50%;
+transform: translateX(-50%);
+color: #ff3b3f;
+font-size: 14px;
+}
+
+.seats-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin: 40px 0;
+}
+
+.seat-row {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.row-label {
+width: 30px;
+text-align: center;
+font-weight: bold;
+}
+
+.seat {
+width: 40px;
+height: 40px;
+border: 2px solid #ff3b3f;
+background: transparent;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.seat:hover {
+background: rgba(255, 59, 63, 0.3);
+}
+
+.seat.selected {
+background: #ff3b3f;
+}
+
+.booking-summary {
+text-align: center;
+margin-top: 30px;
+padding: 20px;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.confirm-button {
+padding: 12px 30px;
+background-color: #ff3b3f;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.confirm-button:disabled {
+background-color: #666;
+cursor: not-allowed;
+}
+
+.confirmation-modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.8);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.confirmation-content {
+background: white;
+padding: 2rem;
+border-radius: 15px;
+max-width: 600px;
+width: 90%;
+max-height: 90vh;
+overflow-y: auto;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.success-banner {
+background: linear-gradient(135deg, #28a745, #20c997);
+color: white;
+padding: 2rem;
+margin: -2rem -2rem 2rem -2rem;
+border-radius: 15px 15px 0 0;
+text-align: center;
+}
+
+.success-banner h2 {
+font-size: 2.5rem;
+margin-bottom: 0.5rem;
+animation: bounce 1s ease infinite;
+}
+
+.success-banner h3 {
+font-size: 1.8rem;
+margin: 0;
+}
+
+.booking-details {
+margin: 2rem 0;
+}
+
+.booking-details h4 {
+color: #333;
+margin-bottom: 1.5rem;
+font-size: 1.5rem;
+}
+
+.booking-details p {
+margin: 0.5rem 0;
+font-size: 1.1rem;
+}
+
+.booking-details strong {
+color: #495057;
+}
+
+@keyframes bounce {
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-10px);
+}
+}
+
+/* Modal Styles */
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal-content {
+background-color: #1a1a1a;
+padding: 30px;
+border-radius: 10px;
+position: relative;
+width: 90%;
+max-width: 400px;
+color: white;
+}
+
+/* City Selector Styles */
+.city-selector {
+text-align: center;
+}
+
+.city-selector h2 {
+font-size: 32px;
+margin-bottom: 30px;
+color: white;
+}
+
+.city-buttons {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.city-button {
+background-color: #ff3b3f;
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 18px;
+border-radius: 25px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.city-button:hover {
+background-color: #ff0a0f;
+}
+
+.close-button {
+position: absolute;
+top: 10px;
+right: 10px;
+background: none;
+border: none;
+color: white;
+font-size: 24px;
+cursor: pointer;
+padding: 5px 10px;
+}
+
+/* Login Styles */
+.login-box {
+text-align: center;
+background-color: rgba(0, 0, 0, 0.9);
+border-radius: 10px;
+}
+
+.login-logo {
+margin-bottom: 30px;
+}
+
+.login-logo img {
+width: 150px;
+height: auto;
+}
+
+.input-group {
+margin-bottom: 20px;
+}
+
+.login-input {
+width: 100%;
+padding: 12px;
+background-color: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 5px;
+color: white;
+font-size: 16px;
+}
+
+.login-input::placeholder {
+color: rgba(255, 255, 255, 0.6);
+}
+
+.remember-me {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+margin-bottom: 20px;
+color: white;
+}
+
+.remember-me label {
+display: flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+width: 16px;
+height: 16px;
+cursor: pointer;
+}
+
+.login-button {
+width: 100%;
+padding: 12px;
+background-color: #ff3b3f;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.login-button:hover {
+background-color: #ff0a0f;
+}
+
+.login-input.error {
+border-color: #ff3b3f;
+box-shadow: 0 0 0 1px #ff3b3f;
+}
+
+.error-message {
+color: #ff3b3f;
+font-size: 12px;
+margin-top: 5px;
+text-align: left;
+padding-left: 5px;
+}
