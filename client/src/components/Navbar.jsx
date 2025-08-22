@@ -7,7 +7,7 @@ const Navbar = () => {
     <header>
       <div className="container d-flex align-items-center">
         <div className="logo-container">
-          <img src="/images/image1.jpg" alt="The Arena Logo" />
+          <img src="images/image1.jpg" alt="The Arena Logo" />
         </div>
         <nav className="ms-auto">
           <ul className="d-flex flex-wrap justify-content-center">

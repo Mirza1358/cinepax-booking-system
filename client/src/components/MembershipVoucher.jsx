@@ -13,7 +13,7 @@ const MembershipVoucher = ({ userData, onClose }) => {
         <button className="voucher-close" onClick={onClose}>×</button>
         <div className="voucher-content">
           <div className="voucher-header">
-            <img src="/images/image1.jpg" alt="The Arena Logo" className="voucher-logo" />
+            <img src="images/image1.jpg" alt="The Arena Logo" className="voucher-logo" />
             <h2>Membership Registration Voucher</h2>
           </div>
           

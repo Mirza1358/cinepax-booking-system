@@ -128,7 +128,7 @@ const Home = () => {
               {movies.slice(0, 3).map((movie) => (
                 <div key={movie.id} className="movie-card">
                   <div className="movie-poster">
-                    <img src={`/images/${movie.imagePath}`} alt={movie.title} />
+                    <img src={`images/${movie.imagePath}`} alt={movie.title} />
                   </div>
                   <div className="movie-details">
                     <h2 className="movie-title">{movie.title} - {movie.format} {movie.language}</h2>
@@ -140,7 +140,7 @@ const Home = () => {
                     </div>
                     <div className="movie-rating">
                       <span>8.8</span>
-                      <img src="/images/star_icon.png" alt="Star Icon" />
+                      <img src="images/star_icon.png" alt="Star Icon" />
                       <small>/10</small>
                     </div>
                     <div className="movie-date">🗓️ 19 Apr 2025</div>
@@ -162,7 +162,7 @@ const Home = () => {
               {movies.slice(3).map((movie) => (
                 <div key={movie.id} className="movie-card">
                   <div className="movie-poster">
-                    <img src={`/images/${movie.imagePath}`} alt={movie.title} />
+                    <img src={`images/${movie.imagePath}`} alt={movie.title} />
                   </div>
                   <div className="movie-details">
                     <h2 className="movie-title">{movie.title} - {movie.format} {movie.language}</h2>
@@ -174,7 +174,7 @@ const Home = () => {
                     </div>
                     <div className="movie-rating">
                       <span>7.0</span>
-                      <img src="/images/star_icon.png" alt="Star Icon" />
+                      <img src="images/star_icon.png" alt="Star Icon" />
                       <small>/10</small>
                     </div>
                     <div className="movie-date">🗓️ 19 Apr 2025</div>
@@ -197,25 +197,25 @@ const Home = () => {
       <div className="movie-container container">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5">
           <div className="col movie">
-            <img src="/images/image3.jpg" alt="Inception" />
+            <img src="images/image3.jpg" alt="Inception" />
             <a href="https://www.youtube.com/watch?v=XZlJfFF58Mo" target="_blank">
               <button className="trailer-btn">MATCH TRAILER</button>
             </a>
           </div>
           <div className="col movie">
-            <img src="/images/image2.jpg" />
+            <img src="images/image2.jpg" />
             <a href="https://www.youtube.com/watch?v=oz7wymKGzOU" target="_blank">
               <button className="trailer-btn">MATCH TRAILER</button>
             </a>
           </div>
           <div className="col movie">
-            <img src="/images/image4.jpg" alt="Shawshank Redemption" />
+            <img src="images/image4.jpg" alt="Shawshank Redemption" />
             <a href="https://www.youtube.com/watch?v=NmzuHjWmXOc" target="_blank">
               <button className="trailer-btn">MATCH TRAILER</button>
             </a>
           </div>
           <div className="col movie">
-            <img src="/images/image5.jpg" alt="Ford vs Ferrari" />
+            <img src="images/image5.jpg" alt="Ford vs Ferrari" />
             <a href="https://www.youtube.com/watch?v=zyYgDtY2AMY" target="_blank">
               <button className="trailer-btn">MATCH TRAILER</button>
             </a>
@@ -227,16 +227,16 @@ const Home = () => {
         <h2>Upcoming Movies</h2>
         <div className="upcoming-movies-images row row-cols-0 row-cols-sm-2 row-cols-md-1">
           <div className="col">
-            <img src="/images/image6.png" alt="Mission Impossible" />
+            <img src="images/image6.png" alt="Mission Impossible" />
           </div>
           <div className="col">
-            <img src="/images/image7.jpg" alt="Snow White" />
+            <img src="images/image7.jpg" alt="Snow White" />
           </div>
           <div className="col">
-            <img src="/images/image8.jpg" alt="Superman" />
+            <img src="images/image8.jpg" alt="Superman" />
           </div>
           <div className="col">
-            <img src="/images/image9.jpg" alt="Final Destination" />
+            <img src="images/image9.jpg" alt="Final Destination" />
           </div>
         </div>
       </section>
@@ -246,16 +246,16 @@ const Home = () => {
         <p>Smart App For Mobile: Pakistan's First exclusive Mobile App (Android) for Cinema has been launched.</p>
         <div className="highlights-events-images row row-cols-1 row-cols-sm-2 row-cols-md-1">
           <div className="col">
-            <img src="/images/image10.jpg" alt="Chand Raat Bazaar" />
+            <img src="images/image10.jpg" alt="Chand Raat Bazaar" />
           </div>
           <div className="col">
-            <img src="/images/image11.jpg" alt="Event 2" />
+            <img src="images/image11.jpg" alt="Event 2" />
           </div>
           <div className="col">
-            <img src="/images/image12.jpeg" alt="Event 3" />
+            <img src="images/image12.jpeg" alt="Event 3" />
           </div>
           <div className="col">
-            <img src="/images/image13.jpg" alt="The Lion King" />
+            <img src="images/image13.jpg" alt="The Lion King" />
           </div>
         </div>
       </section>
