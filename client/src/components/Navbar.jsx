@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
+// Utility function to get correct image path for GitHub Pages
+const getImagePath = (imageName) => {
+  return `/cinepax-booking-system/images/${imageName}`;
+};
+
 const Navbar = () => {
   return (
     <header>
       <div className="container d-flex align-items-center">
         <div className="logo-container">
-          <img src="images/image1.jpg" alt="The Arena Logo" />
+          <img src={getImagePath('image1.jpg')} alt="The Arena Logo" />
         </div>
         <nav className="ms-auto">
           <ul className="d-flex flex-wrap justify-content-center">

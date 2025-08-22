@@ -1,6 +1,11 @@
 import React from 'react';
 import './voucherStyles.css';
 
+// Utility function to get correct image path for GitHub Pages
+const getImagePath = (imageName) => {
+  return `/cinepax-booking-system/images/${imageName}`;
+};
+
 const MembershipVoucher = ({ userData, onClose }) => {
   const voucherNumber = Math.random().toString(36).substring(2, 10).toUpperCase();
   const currentDate = new Date().toLocaleDateString();
@@ -13,7 +18,7 @@ const MembershipVoucher = ({ userData, onClose }) => {
         <button className="voucher-close" onClick={onClose}>×</button>
         <div className="voucher-content">
           <div className="voucher-header">
-            <img src="images/image1.jpg" alt="The Arena Logo" className="voucher-logo" />
+            <img src={getImagePath('image1.jpg')} alt="The Arena Logo" className="voucher-logo" />
             <h2>Membership Registration Voucher</h2>
           </div>
           
